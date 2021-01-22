@@ -6,10 +6,17 @@ services:
             dockerfile: ./docker/nginx/Dockerfile
         ports:
             - 8080:80
-    php:
+#    php:
+#        build:
+#            context: .
+#            dockerfile: ./docker/php/Dockerfile
+#        restart: unless-stopped
+#        expose:
+#            - 9000
+    node:
         build:
             context: .
-            dockerfile: ./docker/php/Dockerfile
+            dockerfile: ./docker/node/Dockerfile
         restart: unless-stopped
         expose:
             - 9000

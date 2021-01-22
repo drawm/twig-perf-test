@@ -1,5 +1,8 @@
 FROM php:7.3-fpm
 
+RUN apt-get update
+RUN apt-get upgrade
+RUN apt-get install -y git
 RUN docker-php-ext-install \
         mbstring opcache \
         && \
